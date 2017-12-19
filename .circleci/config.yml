@@ -28,9 +28,14 @@ jobs:
           name: Run Tests
           command: ./gradlew lint test
 
+      - test:
+          override:
+            - ./gradlew assembleRelease
+            - cp -r project-name/build/outputs $CIRCLE_ARTIFACTS
+            
       - store_artifacts:
           path: app/build/reports
           destination: reports
-          
+
       - store_test_results:
           path: app/build/test-results
