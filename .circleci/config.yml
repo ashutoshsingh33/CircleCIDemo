@@ -35,8 +35,8 @@ jobs:
       - store_test_results:
           path: app/build/test-results
 
-          
+
     test:
       override:
         - ./gradlew assembleRelease
-        - cp -r project-name/build/outputs $CIRCLE_ARTIFACTS
+        - cp -r CircleCIDemo/build/outputs $CIRCLE_ARTIFACTS
