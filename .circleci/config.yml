@@ -4,8 +4,11 @@ jobs:
     working_directory: ~/home/crownstack/helpcodes/CircleCIDemo/
 
     machine:
-    environment:
-        ANDROID_HOME: /home/crownstack/AndroidStudioIDE/Sdk
+        java:
+            version: oraclejdk8
+        environment:
+            ANDROID_HOME: /home/crownstack/AndroidStudioIDE/Sdk
+
 
     docker:
       - image: circleci/android:api-25-alpha
