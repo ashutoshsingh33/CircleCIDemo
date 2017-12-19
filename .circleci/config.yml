@@ -8,12 +8,7 @@ jobs:
             version: oraclejdk8
         environment:
             ANDROID_HOME: /home/crownstack/AndroidStudioIDE/Sdk
-            JVM_OPTS: -Xmx3200m
-
-
-
-    docker:
-      - image: circleci/android:api-25-alpha
+            JVM_OPTS: -Xmx3200
 
     steps:
       - checkout
