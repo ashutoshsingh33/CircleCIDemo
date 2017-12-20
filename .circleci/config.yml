@@ -6,7 +6,7 @@ general:
 
 jobs:
   build:
-    working_directory: ~/CircleCIDemo
+    working_directory: ~ashutoshsingh33/CircleCIDemo
 
     docker:
       - image: circleci/android:api-26-alpha
