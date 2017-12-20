@@ -1,7 +1,7 @@
 version: 2
 jobs:
   build:
-#    working_directory: ~/helpcodes/CircleCIDemo
+    working_directory: ~/helpcodes/CircleCIDemo
 
     docker:
       - image: circleci/android:api-26-alpha
@@ -33,5 +33,8 @@ jobs:
           path: app/build/reports
           destination: reports
 
+      -store_apk:
+        path: app/build/reports
+        
       - store_test_results:
           path: app/build/test-results
