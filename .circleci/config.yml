@@ -5,7 +5,7 @@ jobs:
     working_directory: ~/home/crownstack/helpcodes/CircleCIDemo
     
 
-      
+   machine:
     environment:
       ANDROID_HOME: /usr/local/android-sdk-linux
       JVM_OPTS: -Xmx3200m
