@@ -1,11 +1,11 @@
 version: 2
 jobs:
   build:
-    working_directory: ~/home/crownstack/helpcodes/CircleCIDemo
+    working_directory: ~/helpcodes/CircleCIDemo
 
     docker:
       - image: circleci/android:api-26-alpha
-      
+
     environment:
       JVM_OPTS: -Xmx3200m
 
