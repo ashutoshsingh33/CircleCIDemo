@@ -4,17 +4,10 @@ general:
     artifacts:
     - ~/CircleCIDemo/app/build/outputs/apk/
 
-<<<<<<< HEAD
-=======
-    branches:
-    only:
-    - master
 
->>>>>>> a7d4c771fce4e19cede51199dec59aaf743cb17e
 jobs:
   build:
     working_directory: ~/CircleCIDemo
-    
     branches:
         only:
         - master
