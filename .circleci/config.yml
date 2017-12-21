@@ -8,8 +8,6 @@ general:
     only:
     - master
 
-
-
 jobs:
   build:
     working_directory: ~/CircleCIDemo
