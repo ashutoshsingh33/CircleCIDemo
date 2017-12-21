@@ -4,15 +4,13 @@ general:
     artifacts:
     - ~/CircleCIDemo/app/build/outputs/apk/
 
-    branches:
-    only:
-    - master
-
-
-
 jobs:
   build:
     working_directory: ~/CircleCIDemo
+    
+    branches:
+        only:
+        - master
 
     docker:
       - image: circleci/android:api-26-alpha
