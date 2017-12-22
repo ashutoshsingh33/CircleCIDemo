@@ -4,15 +4,6 @@ general:
     artifacts:
     - ~/CircleCIDemo/app/build/outputs/apk/
 
-#workflows:
-#  build_and_deploy:
-#  jobs:
-#    - build
-#    - deployment
-
-
-
-
 jobs:
   build:
     working_directory: ~/CircleCIDemo
@@ -60,10 +51,6 @@ jobs:
       - store_artifacts:
           path: app/build/outputs/apk/
           destination: apks/
-
-      - run:
-        name: Deploy build
-        commands: - source scripts/deployHockeyApp.sh && uploadToHockeyApp
 
 
 
