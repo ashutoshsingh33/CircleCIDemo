@@ -60,7 +60,9 @@ jobs:
           destination: apks/
 
       - deployment:
-          commands: - source scripts/deployHockeyApp.sh && uploadToHockeyApp
+          staging:
+              branch: master
+              commands: - source scripts/deployHockeyApp.sh && uploadToHockeyApp
 
 
 
