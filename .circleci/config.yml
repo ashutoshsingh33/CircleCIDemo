@@ -52,15 +52,26 @@ jobs:
           path: app/build/outputs/apk/
           destination: apks/
 
-#  deployment:
-#    hockey:
-#      branch: master
-#      commands:
-#         - source scripts/deployHockeyApp.sh && uploadToHockeyApp
+  deployment:
+    hockey:
+      branch: master
+      commands:
+         - source scripts/deployHockeyApp.sh && uploadToHockeyApp
 
 workflows:
   version: 2
   build_and_deploy:
     jobs:
       - build
-#      - deployment
+      - deployment
+    nightly:
+        triggers:
+          - schedule:
+              cron: "0 0 * * *"
+              filters:
+                branches:
+                  only:
+                    - master
+                    - beta
+        jobs:
+          - coverage
