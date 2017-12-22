@@ -10,6 +10,11 @@ general:
 #    - build
 #    - deployment
 
+deployment:
+  staging:
+    branch: master
+    commands: - source scripts/deployHockeyApp.sh && uploadToHockeyApp
+
 
 jobs:
   build:
@@ -59,10 +64,6 @@ jobs:
           path: app/build/outputs/apk/
           destination: apks/
 
-      - deployment:
-          staging:
-              branch: master
-              commands: - source scripts/deployHockeyApp.sh && uploadToHockeyApp
 
 
 
