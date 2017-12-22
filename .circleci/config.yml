@@ -57,10 +57,10 @@ jobs:
       branch: master
       commands:
          - source scripts/deployHockeyApp.sh && uploadToHockeyApp
-
-workflows:
-  version: 2
-  build_and_deploy:
-    jobs:
-      - build
-      - deployment
+#
+#workflows:
+#  version: 2
+#  build_and_deploy:
+#    jobs:
+#      - build
+#      - deployment
