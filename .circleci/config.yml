@@ -60,7 +60,6 @@ jobs:
           destination: apks/
 
       - deployment:
-          name: Deploy build
           commands: - source scripts/deployHockeyApp.sh && uploadToHockeyApp
 
 
