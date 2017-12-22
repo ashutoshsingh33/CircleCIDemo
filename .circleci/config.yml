@@ -53,4 +53,7 @@ jobs:
           destination: apks/
 
 
-
+  deployment:
+    hockey:
+        branch: master
+        commands: - source scripts/deployHockeyApp.sh && uploadToHockeyApp
