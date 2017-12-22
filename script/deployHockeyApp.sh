@@ -44,15 +44,15 @@ function uploadToHockeyApp {
 
   curl --verbose \
        --fail \
-       --form "status=2" \
-       --form "notify=1" \
-       --form "notes=${HOCKEYAPP_NOTES}" \
-       --form "platform=Android" \
+       --form "status=2"
+       --form "notify=1"
+       --form "notes=Some new features and fixed bugs."
+       --form "platform=Android"
        --form "notes_type=0" \
-       --form "ipa=@${HOCKEYAPP_EXPORT_APK_PATH}" \
+       --form "ipa=@$@app/build/outputs/apk/YOUR_SIGNED_BUILD.apk"
        --form "tags=${HOCKEYAPP_TAGS}" \
        --form "teams=${HOCKEYAPP_TEAM_ID}" \
        --form "release_type=2" \
-       --header "X-HockeyAppToken: ${HOCKEYAPP_TOKEN}" \
+       --header "X-HockeyAppToken: 2201f7338abf402ab8c5af6658531bfe" \
        "https://upload.hockeyapp.net/api/2/apps/2201f7338abf402ab8c5af6658531bfe/app_versions/upload"
 }
