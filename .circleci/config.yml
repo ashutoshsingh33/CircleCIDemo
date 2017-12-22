@@ -64,14 +64,3 @@ workflows:
     jobs:
       - build
       - deployment
-    nightly:
-        triggers:
-          - schedule:
-              cron: "0 0 * * *"
-              filters:
-                branches:
-                  only:
-                    - master
-                    - beta
-        jobs:
-          - coverage
