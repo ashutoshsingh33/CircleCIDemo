@@ -54,5 +54,5 @@ jobs:
 
   deployment:
     hockey:
-      branch: master
-      commands: - source scripts/deployHockeyApp.sh && uploadToHockeyApp
+        branch: master
+        commands: - source scripts/deployHockeyApp.sh && uploadToHockeyApp
