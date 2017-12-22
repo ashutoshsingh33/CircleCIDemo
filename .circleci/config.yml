@@ -53,6 +53,11 @@ jobs:
           destination: apks/
 
   deployment:
+    docker:
+      - image: circleci/android:api-26-alpha
+
+    working_directory: ~/CircleCIDemo
+
     hockey:
       branch: master
       commands:
