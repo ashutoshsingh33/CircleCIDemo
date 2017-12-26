@@ -51,15 +51,12 @@ jobs:
       - restore_cache:
           key: 1-gems-{{ checksum "Gemfile.lock" }}
 
-      - run: bundle check || bundle install --path vendor/bundle
-      - save_cache:
-          key: 1-gems-{{ checksum "Gemfile.lock" }}
-          paths: - vendor/bundle
+      - run: bundle check || bundle install
 
       - run:
           name: fastlane
           command: bundle exec fastlane hockey_build
-          
+
       - store_artifacts:
           path: app/build/outputs/apk/
           destination: apks/
